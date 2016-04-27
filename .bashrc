@@ -20,7 +20,8 @@ alias commit="git commit"
 alias a="git add"
 alias au="git add -u"
 alias aa="git add -A"
-alias ai="git add -i"
+alias ai="git add --interactive"
+alias patch="git add --patch"
 alias log="git log"
 alias branch="git branch"
 alias br="git branch"
@@ -39,6 +40,8 @@ alias mst="git checkout master && git pull upstream master"
 alias pso="git push origin"
 alias clean="git clean"
 alias rebase="git rebase"
+alias amend="git amend"
+alias fetch="git fetch"
 
 #vs() { devenv -edit $* & }
 
