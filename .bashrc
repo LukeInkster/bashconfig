@@ -42,6 +42,8 @@ alias clean="git clean"
 alias rebase="git rebase"
 alias amend="git amend"
 alias fetch="git fetch"
+alias backup="git checkout -b \"$(git rev-parse --abbrev-ref HEAD)+bak\" && git checkout -"
+alias rmbackup="git branch -D \"$(git rev-parse --abbrev-ref HEAD)+bak\""
 
 #vs() { devenv -edit $* & }
 
