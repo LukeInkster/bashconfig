@@ -10,10 +10,13 @@ alias healthcheck="C:/Dev/NgCC.exe -s C:/git/Xero/project/Xero.sln"
 alias subl="subl.exe $*"
 alias msbuild="MSBuild.exe $*"
 alias vs="devenv.exe -edit $*"
+alias status="git status"
 alias s="git status"
+alias diff="git diff"
 alias d="git diff"
-alias cf="git checkout --"
+alias checkout="git checkout"
 alias ch="git checkout"
+alias cf="git checkout --"
 alias chb="git checkout -b"
 alias cm="git commit"
 alias commit="git commit"
@@ -38,12 +41,13 @@ alias pick="git cherry-pick"
 alias plum="git pull upstream master"
 alias mst="git checkout master && git pull upstream master"
 alias pso="git push origin"
+alias psob="git push origin \"$(git rev-parse --abbrev-ref HEAD)\"" #push origin this branch
 alias clean="git clean"
 alias rebase="git rebase"
 alias amend="git amend"
 alias fetch="git fetch"
-alias backup="git checkout -b \"$(git rev-parse --abbrev-ref HEAD)+bak\" && git checkout -"
-alias rmbackup="git branch -D \"$(git rev-parse --abbrev-ref HEAD)+bak\""
+alias backup="git checkout -b \"$(git rev-parse --abbrev-ref HEAD)+bak\" && git checkout -" #create a branch called "current"+bak
+alias rmbackup="git branch -D \"$(git rev-parse --abbrev-ref HEAD)+bak\"" #delete a branch called "current"+bak
 
 #vs() { devenv -edit $* & }
 
